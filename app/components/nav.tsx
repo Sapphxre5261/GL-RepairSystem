@@ -29,14 +29,14 @@ export default function Nav() {
         </div> */}
 
         {/* ปุ่มด้านขวา (CTA) */}
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           <Link
             href="/create-repair"
             className="rounded-full bg-blue-600 text-white px-5 py-2 text-sm font-medium hover:bg-blue-700 transition-colors shadow-sm shadow-blue-600/20"
           >
             + แจ้งซ่อมทันที
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </nav>
