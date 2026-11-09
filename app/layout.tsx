@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
-import Sidebar from "@/app/components/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,18 +29,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-zinc-50 font-sans text-zinc-900">
-        
-        {/* 1. Navbar ด้านบนสุด (แสดงทุกหน้า) */}
         <Nav />
-
-        {/* 2. พื้นที่หลักด้านล่าง แบ่งเป็น Sidebar และ เนื้อหา (Children) */}
-        <div className="flex flex-1 min-h-[calc(100vh-73px)]">
-          
-          <main className="flex-1 flex flex-col bg-zinc-50 overflow-y-auto">
-            {children}
-          </main>
-        </div>
-
+        <div className="flex flex-1 min-h-0 w-full">{children}</div>
       </body>
     </html>
   );
